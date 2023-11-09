@@ -88,6 +88,7 @@ reads. Keep only SNP as a variant type.</p>
 <pre><code># extract list of samples belonging to Brno group and Vienna group that will be compared
 bcftools query -l var.diplo-0.1.vcf | grep &#39;Brno&#39; &gt; brnolist.txt
 bcftools query -l var.diplo-0.1.vcf | grep &#39;Vienna&#39; &gt; viennalist.txt
+bcftools query -l var.full-genome-0.1.NoWol.snp.q20.vcf | grep -E &#39;AT|CZ&#39; &gt; clineextremes.list
 # gzip the vcf file to be able to work with bcftools &amp; index it
 bgzip -c var.diplo-0.1.vcf &gt; var.diplo-0.1.vcf.gz
 tabix -p vcf var.diplo-0.1.vcf.gz
