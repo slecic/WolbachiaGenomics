@@ -41,7 +41,7 @@ print(dtm)
 def genencode(row):
 
     ### base on the base in REF and BASE1 and BASE2 add 0/0 for reference homozygote, 0/1 encodes for the heterozygote, 1/1 encodes for alternative homozygote; otherwise add zero.
-    ### The function considers bi-allelic SNPs, but MNVs are also considered if these haven't been filtered out.
+    ### The function considers bi-allelic SNPs, but MNVs (output of Freebayes SNP calling) are also considered if these haven't been filtered out.
     if re.match("^.*A$", row['REF']) and re.match("^.*A$", row['BASE1']) and re.match("^.*A$", row['BASE2']):
         return ('0/0')
     elif re.match("^.*A$", row['REF']) and re.match("^.*A$", row['BASE1']) and re.match("^.*(?!A)$", row['BASE2']):
