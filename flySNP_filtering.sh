@@ -25,5 +25,5 @@ tabix -p vcf ${data}.gz
 # filter out all Wolbachia contigs from the bed file containing all contings
 bedtools intersect -v -a ${allcontig} -b ${wolcontig} > ${allcontig}.nowol.bed
 
-# keep only contings in the filteretd bed file
+# keep the filtered contings in the vcf file
 bcftools view -R ${allcontig}.nowol.bed ${data}.gz > ${data}.NoWol.vcf
