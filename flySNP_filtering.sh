@@ -7,7 +7,6 @@ contig=/mnt/raid10/cerasi/slecic/cerasi/cline/fst/contings
 work=/mnt/raid10/cerasi/slecic/cerasi/cline/fst/work
 outdir=/mnt/raid10/cerasi/slecic/cerasi/cline/fst/out
 
-#mkdir ${workdir}
 mkdir ${outdir}
 
 wolcontig=${contig}/wolbachia-contigs.bed
